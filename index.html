@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>دفترچه موضوعات</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>دفترچه موضوعات</h1>
+        <p>تاپیک‌های خود را اضافه، ویرایش و حذف کنید.</p>
+      </header>
+
+      <section class="card">
+        <form id="topic-form" class="form">
+          <label class="field">
+            <span>عنوان</span>
+            <input id="title" name="title" type="text" placeholder="مثلاً ایده پروژه" required />
+          </label>
+          <label class="field">
+            <span>توضیحات</span>
+            <textarea id="content" name="content" rows="4" placeholder="توضیحات کوتاه بنویسید" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" id="submit-btn">افزودن تاپیک</button>
+            <button type="button" id="cancel-btn" class="ghost" hidden>لغو ویرایش</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="toolbar">
+          <h2>لیست تاپیک‌ها</h2>
+          <span id="count" class="count">0 مورد</span>
+        </div>
+        <ul id="topics" class="topics"></ul>
+        <p id="empty" class="empty">هنوز تاپیکی ثبت نشده است.</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
